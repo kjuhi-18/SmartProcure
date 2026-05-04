@@ -61,7 +61,12 @@ Reward Optimization
    ↓
 Final Recommendation
 ```
-## 📂 Project Structure
+
+---
+
+## 📂 Project Structure  
+
+```text
 SmartProcure/
 │
 ├── Deliveries.csv
@@ -77,37 +82,58 @@ SmartProcure/
 │
 ├── README.md
 └── LICENSE
-##⚙️ How It Works
-1️⃣ Input
-Factory ID
-Project ID
-Delivery Date
-2️⃣ Feature Engineering
-Distance calculation
-Demand & priority encoding
-Weather + traffic integration
-Time features
-3️⃣ Models
-⏱️ Time Prediction Model
-Random Forest Regressor
-Predicts delivery time
-⚠️ Delay Prediction Model
-Random Forest Classifier
-Predicts delay
+```
 
-📊 ROC-AUC Score: 0.983
-4️⃣ Risk Classification
-Delay	Risk
-< 2 hrs	🟢 Low
-2–5 hrs	🟡 Medium
-> 5 hrs	🔴 High
-5️⃣ Reward Optimization
+---
+
+## ⚙️ How It Works  
+
+### 1️⃣ Input  
+- Factory ID  
+- Project ID  
+- Delivery Date  
+
+### 2️⃣ Feature Engineering  
+- Distance calculation  
+- Demand & priority encoding  
+- Weather + traffic integration  
+- Time features  
+
+### 3️⃣ Models  
+
+⏱️ Time Prediction Model  
+- Random Forest Regressor  
+- Predicts delivery time  
+
+⚠️ Delay Prediction Model  
+- Random Forest Classifier  
+- Predicts delay  
+
+📊 ROC-AUC Score: 0.983  
+
+### 4️⃣ Risk Classification  
+
+| Delay | Risk |
+|------|------|
+| < 2 hrs | 🟢 Low |
+| 2–5 hrs | 🟡 Medium |
+| > 5 hrs | 🔴 High |
+
+### 5️⃣ Reward Optimization  
+
+```text
 Reward =
 Priority Score
 - (2 × Delay)
 - (5 × Traffic Index)
 - (5 × Weather Index)
-## 📊 Example Output
+```
+
+---
+
+## 📊 Example Output  
+
+```text
 Distance: 320 km
 Expected Time: 18.2 hours
 Predicted Delay: 4.5 hours
@@ -116,47 +142,81 @@ Risk Level: Medium
 Reward Score: 3.2
 
 Recommendation: Moderate Priority Dispatch
-## 🧪 Installation
+```
+
+---
+
+## 🧪 Installation  
+
+```bash
 pip install pandas scikit-learn joblib
-## ▶️ Run
+```
+
+---
+
+## ▶️ Run  
+
+```bash
 python predict_app.py
-📈 Key Insights
-🚗 Traffic is the biggest delay factor
-🌦️ Weather impacts long-distance deliveries
-📏 Distance increases risk exposure
-⚠️ Current systems ignore priority-based optimization
-💼 Business Impact
-Metric	Value
-Delay Reduction	20–30%
-ROC-AUC	0.983
-Inference Time	< 1 sec
-Data Sources	4 CSVs
-🚀 Future Scope
-🌐 Real-time APIs (Google Maps, Weather)
-📊 Streamlit dashboard
-🛣️ Route optimization
-🤖 Reinforcement learning
-🏢 ERP integration
-👨‍💻 Team
+```
 
-SymbiWarriors
+---
 
-Kunal Jhindal
-Krishnav Rastogi
-Gnana Pushyami Dommaraju
-🏁 Conclusion
+## 📈 Key Insights  
 
-SmartProcure AI is not just a prediction tool —
+- 🚗 Traffic is the biggest delay factor  
+- 🌦️ Weather impacts long-distance deliveries  
+- 📏 Distance increases risk exposure  
+- ⚠️ Current systems ignore priority-based optimization  
 
-👉 It is a Decision Intelligence System
+---
 
-✔ Predicts
-✔ Classifies
-✔ Optimizes
-✔ Recommends
+## 💼 Business Impact  
 
-💡 From reactive logistics → to intelligent decision-making
+| Metric | Value |
+|------|------|
+| Delay Reduction | 20–30% |
+| ROC-AUC | 0.983 |
+| Inference Time | < 1 sec |
+| Data Sources | 4 CSVs |
 
-⭐ Support
+---
+
+## 🚀 Future Scope  
+
+- 🌐 Real-time APIs (Google Maps, Weather)  
+- 📊 Streamlit dashboard  
+- 🛣️ Route optimization  
+- 🤖 Reinforcement learning  
+- 🏢 ERP integration  
+
+---
+
+## 👨‍💻 Team  
+
+**SymbiWarriors**  
+
+- Kunal Jhindal  
+- Krishnav Rastogi  
+- Gnana Pushyami Dommaraju  
+
+---
+
+## 🏁 Conclusion  
+
+SmartProcure AI is not just a prediction tool —  
+
+👉 It is a Decision Intelligence System  
+
+✔ Predicts  
+✔ Classifies  
+✔ Optimizes  
+✔ Recommends  
+
+💡 From reactive logistics → to intelligent decision-making  
+
+---
+
+## ⭐ Support  
 
 If you like this project, give it a ⭐ on GitHub!
